@@ -1,9 +1,308 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300&display=swap');
+url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-body {
-    background: magenta;
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+    margin:0 auto;
+  }
+  nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+      text-align:center;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+  }
+  a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+
+.button-findmore {
+  text-align: center;
+  padding-top:40px;
+  olor: #FBFBFB; 
+  width: 225px;
+  height: 40px;
 }
-p {
-    font-size: 2em;
+
+.findmore-page h2 {
+  text-align: center;
+  padding-top:50px;
+  padding-buttom:30px;
+}
+
+.headline h2 {
+  margin-top:2rem;
+  margin-bottom:2.5rem;
+  text-align:center;
+}
+
+.patient {
+  width:400px;
+ height:280px;
+ overflow:hidden;
+ position:relative;
+ text-align:center;
+ margin:auto
+}
+
+.patient img {
+  position:static;
+ +position:relative;
+ top:-50%;left:-50%;
+ width:23%;
+ height:auto;
+ vertical-align:middle;
+}
+
+.patient p {
+  position:static;
+ +position:absolute;
+ top:50%
+} 
+
+.eating-disorder ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin:0;
+}
+
+.eating-disorder ul li {
+  display:block;
+  list-style: none;
+  height: 35px;
+  width:100px;
+  order:4;
+  margin-left:1.5rem;
+  margin-right:1.5rem;
+  text-align:center;
+  align-items:center;
+  padding: 8px 20px 8px 20px;
+  background-color: #0082e6;
+  border-radius: 4px;
+}
+
+.eating-disorder ul li a {
+  color:white;
+  font-size:60%;
+  line-height: 35px;
+}
+
+a:link {
+  text-decoration:none;
+}
+
+h6 {
+  text-align:center;
+  margin-top:1em;
+}
+
+.button {
+  display:block;
+  margin:0 auto;
+  margin-top:3.5rem;
+  background-color: white;
+  border-style:solid;
+  border-color:#0082e6;
+  padding: 1px 30px;
+  height:2.5rem;
+  width:12%;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.button p {
+   text-align: center;
+   text-transform: uppercase;
+    color:#0082e6;
+    user-select: none;
+    margin-top:.6rem;
+}
+
+.headline h2 em {
+  color:#0082e6;
+  font-style:normal;
+  font-size:150%;
+}
+
+.patient100 {
+  display:grid;
+  grid-template-columns: [first] 15% [line2] 20% [line3] auto [col4-start] 15% [end];
+  grid-template-rows: repeat(4, auto);
+}
+
+.patient100 p {
+  font-size:80%;
+}
+
+.patient100 em {
+  font-style:normal;
+  font-size:120%;
+  font-weight:bold;
+}
+
+img {
+  width:40%;
+}
+
+.img1 {
+  display:grid;
+  grid-column: 2 / span 1;
+  grid-row: 1 / 2;
+  justify-self: center;
+}
+
+.p1{
+  display:grid;
+  grid-column: 3 / span 1;
+  grid-row: 1 / 2;
+  white-space: pre-wrap;
+  align-self:center;
+}
+
+.img2 {
+  display:grid;
+  grid-column: 2 / span 1;
+  grid-row: 2 / 3;
+}
+
+.p2{
+  display:grid;
+  grid-column: 3 / span 1;
+  grid-row: 2 / 3;
+  white-space: pre-wrap;
+}
+
+.img3 {
+  display:grid;
+  grid-column: 2 / span 1;
+  grid-row: 3 / 4;
+}
+
+.p3{
+  display:grid;
+  grid-column: 3 / span 1;
+  grid-row: 3 / 4;
+  white-space: pre-wrap;
+}
+
+.img4 {
+  display:grid;
+  grid-column: 2 / span 1;
+  grid-row: 4 / 5;
+}
+
+.p4{
+  display:grid;
+  grid-column: 3 / span 1;
+  grid-row: 4 / 5;
+  white-space: pre-wrap;
+}
+
+.button-home {
+  margin:0 auto;
+  margin-top:3.5rem;
+  margin-bottom:4rem;
+  background-color: white;
+  border-style:solid;
+  border-color:#0082e6;
+  padding: 1px 30px;
+  height:2.5rem;
+  width:15%;
+  text-decoration: none;
+  font-size: 50%;
+  border-radius: 4px;
+}
+
+.button-home p {
+ text-align: center;
+  text-transform: uppercase;
+  color:#0082e6;
+  user-select: none;
+  margin-top:.8rem;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
 }
