@@ -57,15 +57,6 @@ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     display: none;
   }
 
-
-.button-findmore {
-  text-align: center;
-  padding-top:40px;
-  olor: #FBFBFB; 
-  width: 225px;
-  height: 40px;
-}
-
 .findmore-page h2 {
   text-align: center;
   padding-top:50px;
@@ -99,7 +90,31 @@ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .patient p {
   position:static;
  +position:absolute;
- top:50%
+  top:50%
+} 
+
+.patient-game1 {
+  width:400px;
+ height:280px;
+ overflow:hidden;
+ position:relative;
+ text-align:center;
+ margin:auto
+}
+
+.patient-game1 img {
+  position:static;
+ +position:relative;
+ top:-50%;left:-50%;
+ width:18%;
+ height:auto;
+ vertical-align:middle;
+}
+
+.patient-game1 p {
+  position:static;
+ +position:absolute;
+  top:50%
 } 
 
 .eating-disorder ul {
@@ -112,54 +127,20 @@ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .eating-disorder ul li {
   display:block;
   list-style: none;
-  height: 35px;
-  width:100px;
+  /*height: 35px;
+  width:100px;*/
   order:4;
   margin-left:1.5rem;
   margin-right:1.5rem;
   text-align:center;
-  align-items:center;
-  padding: 8px 20px 8px 20px;
+  /*align-items:center;*/
+  /*padding: 8px 20px 8px 20px;
   background-color: #0082e6;
-  border-radius: 4px;
-}
-
-.eating-disorder ul li a {
-  color:white;
-  font-size:60%;
-  line-height: 35px;
+  border-radius: 4px;*/
 }
 
 a:link {
   text-decoration:none;
-}
-
-h6 {
-  text-align:center;
-  margin-top:1em;
-}
-
-.button {
-  display:block;
-  margin:0 auto;
-  margin-top:3.5rem;
-  background-color: white;
-  border-style:solid;
-  border-color:#0082e6;
-  padding: 1px 30px;
-  height:2.5rem;
-  width:12%;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 4px;
-}
-
-.button p {
-   text-align: center;
-   text-transform: uppercase;
-    color:#0082e6;
-    user-select: none;
-    margin-top:.6rem;
 }
 
 .headline h2 em {
@@ -168,17 +149,17 @@ h6 {
   font-size:150%;
 }
 
-.patient100 {
+.patient-score {
   display:grid;
   grid-template-columns: [first] 15% [line2] 20% [line3] auto [col4-start] 15% [end];
   grid-template-rows: repeat(4, auto);
 }
 
-.patient100 p {
+.patient-score p {
   font-size:80%;
 }
 
-.patient100 em {
+.patient-score em {
   font-style:normal;
   font-size:120%;
   font-weight:bold;
@@ -188,14 +169,14 @@ img {
   width:40%;
 }
 
-.img1 {
+.img1-score {
   display:grid;
   grid-column: 2 / span 1;
   grid-row: 1 / 2;
   justify-self: center;
 }
 
-.p1{
+.p1-score{
   display:grid;
   grid-column: 3 / span 1;
   grid-row: 1 / 2;
@@ -203,69 +184,46 @@ img {
   align-self:center;
 }
 
-.img2 {
+.img2-score {
   display:grid;
   grid-column: 2 / span 1;
   grid-row: 2 / 3;
 }
 
-.p2{
+.p2-score{
   display:grid;
   grid-column: 3 / span 1;
   grid-row: 2 / 3;
   white-space: pre-wrap;
 }
 
-.img3 {
+.img3-score {
   display:grid;
   grid-column: 2 / span 1;
   grid-row: 3 / 4;
 }
 
-.p3{
+.p3-score {
   display:grid;
   grid-column: 3 / span 1;
   grid-row: 3 / 4;
   white-space: pre-wrap;
 }
 
-.img4 {
+.img4-score {
   display:grid;
   grid-column: 2 / span 1;
   grid-row: 4 / 5;
 }
 
-.p4{
+.p4-score {
   display:grid;
   grid-column: 3 / span 1;
   grid-row: 4 / 5;
   white-space: pre-wrap;
 }
 
-.button-home {
-  margin:0 auto;
-  margin-top:3.5rem;
-  margin-bottom:4rem;
-  background-color: white;
-  border-style:solid;
-  border-color:#0082e6;
-  padding: 1px 30px;
-  height:2.5rem;
-  width:15%;
-  text-decoration: none;
-  font-size: 50%;
-  border-radius: 4px;
-}
 
-.button-home p {
- text-align: center;
-  text-transform: uppercase;
-  color:#0082e6;
-  user-select: none;
-  margin-top:.8rem;
-  margin-left:auto;
-  margin-right:auto;
-}
 
 @media (max-width: 952px){
   label.logo{
@@ -280,7 +238,7 @@ img {
   .checkbtn{
     display: block;
   }
-  ul{
+  nav ul{
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -306,3 +264,47 @@ img {
     left: 0;
   }
 }
+
+.button a {
+  display:block;
+  margin:0 auto;
+  margin-top:2.5rem;
+  margin-bottom:3rem;
+  text-align: center;
+  width:8%;
+  height:1.5rem;
+  text-decoration: none;
+        border: 1px solid #0082e6;
+        color: #0082e6;
+        padding: 2px 30px;
+        border-radius: 4px;
+}
+
+.button-game a {
+  display:block;
+  margin:0 auto;
+  margin-top:2.5rem;
+  text-align: center;
+  width:8%;
+  height:1.5rem;
+  text-decoration: none;
+        border: 1px solid #0082e6;
+        color: #0082e6;
+        padding: 2px 30px;
+        border-radius: 4px;
+}
+
+
+.eating-disorder button a {
+  margin-top:2.5rem;
+  text-align: center;
+  width: 20%;
+  height:5rem;
+  text-decoration: none;
+        border:none;
+        color: white;
+        background-color: #0082e6;
+        padding: 2px 30px;
+        border-radius: 4px;
+}
+
