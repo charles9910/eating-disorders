@@ -70,8 +70,8 @@ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 }
 
 .patient {
-  width:400px;
- height:280px;
+ width:400px;
+ height:300px;
  overflow:hidden;
  position:relative;
  text-align:center;
@@ -99,7 +99,7 @@ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
  overflow:hidden;
  position:relative;
  text-align:center;
- margin:auto
+ margin:auto;
 }
 
 .patient-game1 img {
@@ -127,16 +127,10 @@ url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .eating-disorder ul li {
   display:block;
   list-style: none;
-  /*height: 35px;
-  width:100px;*/
   order:4;
   margin-left:1.5rem;
   margin-right:1.5rem;
   text-align:center;
-  /*align-items:center;*/
-  /*padding: 8px 20px 8px 20px;
-  background-color: #0082e6;
-  border-radius: 4px;*/
 }
 
 a:link {
@@ -283,9 +277,9 @@ img {
 .button-game a {
   display:block;
   margin:0 auto;
-  margin-top:2.5rem;
+  margin-top:4rem;
   text-align: center;
-  width:8%;
+  width:5%;
   height:1.5rem;
   text-decoration: none;
         border: 1px solid #0082e6;
@@ -295,16 +289,28 @@ img {
 }
 
 
-.eating-disorder button a {
+.button-option a {
+  font-size: 16px;
   margin-top:2.5rem;
   text-align: center;
-  width: 20%;
-  height:5rem;
+  width:6rem;
+  height:3rem;
   text-decoration: none;
-        border:none;
-        color: white;
+        color:white;
         background-color: #0082e6;
-        padding: 2px 30px;
+        padding:16px 30px;
         border-radius: 4px;
 }
 
+.button-option4 a {
+  font-size: 16px;
+  margin-top:2.5rem;
+  text-align: center;
+  width:6rem;
+  height:3rem;
+  text-decoration: none;
+        color:white;
+        background-color: #0082e6;
+        padding:16px 60px;
+        border-radius: 4px;
+}
