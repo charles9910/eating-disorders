@@ -218,7 +218,7 @@ button {
   text-decoration: none;
 }
 
-.header {
+.header1 {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -850,6 +850,10 @@ h6 {
 
 
 
+
+
+
+
 /* gamepage css */
 
 * {
@@ -1000,7 +1004,8 @@ button {
 .header {
   margin-bottom: 1.8em;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  padding-left: 13rem;
   align-items: center;
   padding-bottom: 0.6em;
 }
@@ -1012,6 +1017,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 0.7em 1.8em;
+  margin-left:5rem;
 }
 .question {
   margin-bottom: 1.25em;
@@ -1059,6 +1065,12 @@ button {
   font-size: 1.5em;
   color: #ffffff;
 }
+
+
+
+
+
+
 
 
 
