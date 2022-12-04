@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- PUT A TITLE IN HERE -->
+    <title>Eating Disorder Handbook</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts/gamepage.js" defer></script>
+    
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo"><a href="index.html">Eating Disorder Handbook</a></Eating></label>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a class="active" href="#">Game</a></li>
+        <li><a href="findmorepage.html">Find More</a></li>
+      </ul>
+    </nav>
+    <style>
+      body {
+            height: 110vh;
+        background: linear-gradient(184deg,#8754ff,#8E2DE2);
+  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+}
+    </style>
+    
+    <div class="start-screen">
+      <button id="start-button">Start</button>
+    </div>
+    <div id="display-container">
+      <div class="header">
+        <div class="number-of-count">
+          <span class="number-of-question">1 of 3 questions</span>
+        </div>
+        <div class="timer-div">
+          <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png" width="20px" />
+          <span class="time-left">10s</span>
+        </div>
+      </div>
+      <div id="container">
+        <!-- questions and options will be displayed here -->
+      </div>
+      <button id="next-button">Next</button>
+    </div>
+    <div class="score-container hide">
+      <div id="user-score">Demo Score</div>
+      <button id="restart">Restart</button>
+    </div>
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>

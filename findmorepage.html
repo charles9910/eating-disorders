@@ -1,39 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
-      <title>collapsible menu</title>
-     <link rel="stylesheet" href="styles/styles.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- PUT A TITLE IN HERE -->
+    <title>Eating Disorder Handbook</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     
-     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-     <script src="scripts/scripts.js"></script>
-   </head>
-   <body>
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="scripts/findmorepage.js"></script>
+    
+  </head>
+  <body>
+    <style>
+      body {
+      background-image:url("images/background.png");
+      background-repeat: repeat;
+      background-size: contain;
+      padding-top:7rem;
+      padding-bottom:5rem;
+      }
+    </style>
+
      <nav>
          <input type="checkbox" id="check">
          <label for="check" class="checkbtn">
          <i class="fas fa-bars"></i>
          </label>
-         <label class="logo">Eating Disorder Handbook</label>
+         <label class="logo"><a href="index.html">Eating Disorder Handbook</a></Eating></label>
          <ul class = "nav_ul">
             <li><a href="index.html">Homepage</a></li>
-            <li><a href="gamepage1.html">Game</a></li>
+            <li><a href="gamepage.html">Game</a></li>
             <li><a class="active" href="#">Find More</a></li>
          </ul>
       </nav>
-      <style>
-        body {
-        background-image:url("images/background.png");
-        background-repeat: repeat;
-        background-size: contain;
-        }
-      </style>
+      
       <h2 class = "disorder_name">Selective Eating Disorder</h2>
       <div class="centered">
          <div class="box-zdmeau">
-            <h3 class="Collapsing current">What is a Selective Eating Disorder?</h3>
+            <h3 class="Collapsing">What is a Selective Eating Disorder?</h3>
             <div class="coll_body">
                <p>A selective eating disorder is subsumed under the Avoidant Restrictive Food Intake Disorder (ARFID). Those suffering from ARFID are phobic and anxious about certain foods, have sensory aversions to certain textures, tastes, or swallowing, and often have a restricted diet.</p>
             </div>
