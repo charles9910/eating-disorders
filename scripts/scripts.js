@@ -12,5 +12,4 @@
       $(this).removeClass("in-view");
     }
   });
-});
  
