@@ -1297,3 +1297,88 @@ a.active,a:hover{
     left: 0;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* loading page */
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+
+body {
+  margin: 0;
+  font-family: 'Staatliches', cursive;
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  animation: backgroundChange .5s linear 3s forwards;
+  display:flex;
+  justify-content: center;
+}
+
+.load-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 60px;
+  width: fit-content;
+  display: flex;
+  animation: colorChange .5s linear 3s forwards;
+  color:#0082e6;
+}
+
+.loaded-text {
+  transform: scale(1.5);
+  animation: scaleText .5s linear .5s forwards;
+}
+
+.loading-text {
+  width: 0;
+  overflow: hidden;
+  animation: expand 1s linear 1.5s forwards;
+  white-space: nowrap;
+}
+
+@keyframes scaleText {
+  from {transform: scale(1.5)}
+  to {transform: scale(1)}
+}
+
+@keyframes expand {
+  from {width: 0;}
+  to {width: 70vmax;}
+}
+
+@keyframes backgroundChange {
+  from {background-color: white}
+  to {background-color: #0082e6}
+}
+
+@keyframes colorChange {
+  from {color: #0082e6}
+  to {color: white}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {
+    opacity: 0; 
+    z-index: -1;
+  }
+}
