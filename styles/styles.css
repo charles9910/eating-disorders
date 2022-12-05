@@ -64,17 +64,14 @@ h1::-moz-selection {
   height: 100vh;
   min-height: 800px;
   background: white;
-  position: relative;
 }
 
 .sectionWrapper {
   width: 85%;
-  height: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: relative;
 }
 
 .background {
@@ -443,8 +440,9 @@ button {
 @media (max-width: 1200px) {
   
   .services .sectionWrapper {
-    padding-top: 185px;
+    padding-top: 15px;
     padding-bottom: 185px;
+    margin-top: 5%;
   }
   
   .services .grid {
@@ -456,7 +454,7 @@ button {
   
   .services .grid .card {
     width: 420px;
-    padding: 28px 40px;
+    padding: 28px 30px;
     background: linear-gradient(to bottom right, #313131, #0F0F0F);
     border-radius: 5px;
   }
@@ -465,7 +463,7 @@ button {
 @media (max-width: 850px) {
   
   .services .sectionWrapper {
-    padding-top: 150px;
+    padding-top: 8px;
     padding-bottom: 150px;
   }
   
