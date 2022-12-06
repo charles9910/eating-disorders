@@ -488,7 +488,7 @@ button {
 
 .services .grid .card p {
   color: #C3C3C3;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: normal;
 }
 
@@ -542,7 +542,7 @@ button {
   
   .services .grid .card {
     width: 420px;
-    padding: 28px 30px;
+    padding: 22px 30px;
     background: linear-gradient(to bottom right, #313131, #0F0F0F);
     border-radius: 5px;
   }
@@ -583,7 +583,7 @@ button {
   
   .services .grid .card {
     width: 100%;
-    padding: 31.5px 30px;
+    padding: 25px 30px;
     background: linear-gradient(to bottom right, #313131, #0F0F0F);
     border-radius: 5px;
   } 
@@ -987,7 +987,7 @@ button {
   margin-top:1rem;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 73%;
+  top: 65%;
   left: 50%;
   border-radius: 0.6em;
 }
