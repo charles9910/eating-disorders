@@ -1,18 +1,98 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 
-/* homepage css */
 
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
- 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* loading page */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;;
+}
+
+.loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  animation: backgroundChange .5s linear 3s forwards;
+  display:flex;
+  justify-content: center;
+}
+
+.load-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 60px;
+  width: fit-content;
+  display: flex;
+  animation: colorChange .5s linear 3s forwards;
+  color:#0082e6;
+}
+
+.loaded-text {
+  transform: scale(1.5);
+  animation: scaleText .5s linear .5s forwards;
+}
+
+.loading-text {
+  width: 0;
+  overflow: hidden;
+  animation: expand 1s linear 1.5s forwards;
+  white-space: nowrap;
+}
+
+@keyframes scaleText {
+  from {transform: scale(1.5)}
+  to {transform: scale(1)}
+}
+
+@keyframes expand {
+  from {width: 0;}
+  to {width: 70vmax;}
+}
+
+@keyframes backgroundChange {
+  from {background-color: white}
+  to {background-color: #0082e6}
+}
+
+@keyframes colorChange {
+  from {color: #0082e6}
+  to {color: white}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {
+    opacity: 0; 
+    z-index: -1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Homepage */
 * {
   margin: 0;
   padding: 0;
 }  
 
 body {
-  font-family: "Source Sans Pro";
+  font-family:'Poppins', sans-serif;;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -93,13 +173,21 @@ nav{
   animation: 2s fadeInNav ease;
   margin-bottom:2rem;
 }
-label.logo{
+
+
+label.logo {
   color: white;
   font-size: 35px;
-  line-height: 90px;
-  padding: 20px 100px;
+  padding: 20px 80px;
   font-weight: bold;
+  display: inline-block;
+       	 width: 60%;
+       	 height: 100px;
+       	 overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
 }
+
 
 label.logo a:-webkit-any-link{
   color:white;
@@ -198,7 +286,7 @@ button {
   -webkit-border-radius: 12;
   -moz-border-radius: 12;
   border-radius: 12px;
-  font-family: Arial;
+  font-family: 'Poppins', sans-serif;;
   color: #ffffff;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
@@ -226,7 +314,7 @@ button {
 
 .headerWrapper {
   text-align: center;
-  position: relative;
+  position: static;
   padding: 56px 71px 128px 108px;
 }
 
@@ -270,8 +358,8 @@ button {
 .circle.blue {
   background: linear-gradient(#4F3DD5, #3DB2D5);
   position: absolute;
-  top: 13vh;
-  left: 0px;
+  top: 23vh;
+  left: 40px;
   animation: circleBlueMove 2s ease;
   box-shadow: 3px 3px 15px rgba(61, 178, 213, 0.4);
 }
@@ -289,8 +377,8 @@ button {
 .circle.orange { 
   background: linear-gradient(#D53D3D, #D5B83D);
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom: -15px;
+  right: 45px;
   animation: circleOrangeMove 2s ease;
   box-shadow: 3px 3px 15px rgba(213, 184, 61, 0.4);
 }
@@ -317,8 +405,8 @@ button {
 .square.red {
   background: linear-gradient(135deg, #D53D3D, #D53DC9);
   position: absolute;
-  top: 13vh; 
-  right: 15px;
+  top: 28vh; 
+  right: 45px;
   animation: squareRedMove 2s ease;
   box-shadow: 3px 3px 15px rgba(213, 61, 201, 0.4);
   transform: rotate(45deg);
@@ -342,7 +430,7 @@ button {
   height: 175px;
   position: absolute;
   bottom: -17px; 
-  left: -20px;  
+  left: -10px;  
   animation: triangleGreendMove 2s ease;
 } 
 
@@ -570,7 +658,7 @@ h6 {
 .circle.blue {
   background: linear-gradient(#4F3DD5, #3DB2D5);
   position: absolute;
-  top: 129px;
+  top: 150px;
   left: 50px;
   animation: circleBlueMove 2s ease;
   box-shadow: 3px 3px 15px rgba(61, 178, 213, 0.4);
@@ -860,105 +948,7 @@ h6 {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-
-nav{
-  width: 100vw;
-  height: 100px;
-  background: #0082e6;
-  position: absolute;
-  top: 0;
-  animation: 2s fadeInNav ease;
-  margin-bottom:2rem;
-}
-label.logo{
-  color: white;
-  font-size: 35px;
-  line-height: 90px;
-  padding: 20px 100px;
-  font-weight: bold;
-}
-
-label.logo a:-webkit-any-link{
-  color:white;
-}
-
-nav ul{
-  margin-top:0.8rem;
-  float: right;
-  margin-right: 20px;
-  height:100%;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 60px;
-  margin: 0 5px;
-}
-nav ul li a{
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-}
-a.active,a:hover{
-  background: #1b9bff;
-  transition: .5s;
-}
-.checkbtn{
-  margin-top:0.5rem;
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 80px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (min-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 952px){
-  .checkbtn{
-    display: block;
-  }
-  nav ul{
-    position: absolute;  
-    z-index: 9999;  
-    width: 30vh;
-    height: 50vh;
-    padding-left:0;
-    top: 64px;
-    left: -60%;
-    text-align: center;
-    transition: all .5s;
-    background-color:#0082e6;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #30cfd0;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
+  font-family: 'Poppins', sans-serif;;
 }
 
 .start-screen,
@@ -997,27 +987,26 @@ button {
   margin-top:1rem;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 56%;
+  top: 73%;
   left: 50%;
   border-radius: 0.6em;
 }
 .header {
-  margin-bottom: 1.8em;
   display: flex;
-  justify-content: start;
-  padding-left: 13rem;
+  justify-content: flex-end;
   align-items: center;
   padding-bottom: 0.6em;
+  margin-bottom: 0.6rem;
 }
 .timer-div {
   background-color: #e1f5fe;
-  width: 7.5em;
+  width: 7em;
   border-radius: 1.8em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.7em 1.8em;
-  margin-left:5rem;
+  margin-left:20%;
 }
 .question {
   margin-bottom: 1.25em;
@@ -1119,8 +1108,12 @@ button {
   font-size: 14px;
   font-weight: 700;
   border-top: 1px solid #ddd;
+  padding:0 0.5em;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #CCCCCC));
-  
+  display: inline-block;
+  overflow:hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
 }
 
 .Collapsing:before {
@@ -1201,184 +1194,3 @@ button {
   box-sizing: border-box;
 }
 
-nav{
-  width: 100vw;
-  height: 100px;
-  background: #0082e6;
-  position: absolute;
-  top: 0;
-  animation: 2s fadeInNav ease;
-  margin-bottom:2rem;
-}
-label.logo{
-  color: white;
-  font-size: 35px;
-  line-height: 90px;
-  padding: 20px 100px;
-  font-weight: bold;
-}
-
-label.logo a:-webkit-any-link{
-  color:white;
-}
-
-nav ul{
-  margin-top:0.8rem;
-  float: right;
-  margin-right: 20px;
-  height:100%;
-}
-nav ul li{
-  display: inline-block;
-  line-height: 60px;
-  margin: 0 5px;
-}
-nav ul li a{
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-}
-a.active,a:hover{
-  background: #1b9bff;
-  transition: .5s;
-}
-.checkbtn{
-  margin-top:0.5rem;
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 80px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (min-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 952px){
-  .checkbtn{
-    display: block;
-  }
-  nav ul{
-    position: absolute;  
-    z-index: 9999;  
-    width: 30vh;
-    height: 50vh;
-    padding-left:0;
-    top: 64px;
-    left: -60%;
-    text-align: center;
-    transition: all .5s;
-    background-color:#0082e6;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #30cfd0;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* loading page */
-@import url('https://fonts.googleapis.com/css?family=Staatliches');
-
-body {
-  margin: 0;
-  font-family: 'Staatliches', cursive;
-}
-
-.loader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: white;
-  width: 100%;
-  height: 100vh;
-  animation: backgroundChange .5s linear 3s forwards;
-  display:flex;
-  justify-content: center;
-}
-
-.load-text {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  font-size: 60px;
-  width: fit-content;
-  display: flex;
-  animation: colorChange .5s linear 3s forwards;
-  color:#0082e6;
-}
-
-.loaded-text {
-  transform: scale(1.5);
-  animation: scaleText .5s linear .5s forwards;
-}
-
-.loading-text {
-  width: 0;
-  overflow: hidden;
-  animation: expand 1s linear 1.5s forwards;
-  white-space: nowrap;
-}
-
-@keyframes scaleText {
-  from {transform: scale(1.5)}
-  to {transform: scale(1)}
-}
-
-@keyframes expand {
-  from {width: 0;}
-  to {width: 70vmax;}
-}
-
-@keyframes backgroundChange {
-  from {background-color: white}
-  to {background-color: #0082e6}
-}
-
-@keyframes colorChange {
-  from {color: #0082e6}
-  to {color: white}
-}
-
-@keyframes fadeOut {
-  from {opacity: 1}
-  to {
-    opacity: 0; 
-    z-index: -1;
-  }
-}
